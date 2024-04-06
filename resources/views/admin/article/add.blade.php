@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/daterangepicker/daterangepicker.css")}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/summernote/summernote-bs4.min.css")}}">
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -48,7 +49,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Solo Events</li>
+                                <li class="breadcrumb-item active">Article</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -63,32 +64,36 @@
                         <div class="col-md-12">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Solo Event</h3>
+                                    <h3 class="card-title">Article</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="{{route('addSoloEvent')}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('addArticle')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="exampleJudulBerita">Judul Berita</label>
-                                            <input name="title" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Judul Berita">
+                                            <label for="exampleJudulBerita">Judul Artikel</label>
+                                            <input name="title" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Judul Artikel">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Masukkan Start Periode</label>
-                                            <input name="start_periode" type="date" class="form-control" id="exampleInputPassword1" placeholder="Start Periode" value="{{date('Y-m-d')}}">
+                                            <label>Author</label>
+                                            <select name="author_id" class="form-control">
+                                                @foreach ($author as $a)
+                                                <option value="{{$a->id_author}}">{{$a->author_name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Masukkan End Periode</label>
-                                            <input name="end_periode" type="date" class="form-control" id="exampleInputPassword1" placeholder="End Periode" value="{{date('Y-m-d')}}">
+                                            <label for="exampleInputPassword1">Content</label>
+                                            <textarea name="content" id="summernote"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleJudulBerita">Lokasi</label>
-                                            <input name="location" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Lokasi">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Deskripsi</label>
-                                            <textarea name="description" class="form-control" rows="3" placeholder="Masukkan Deskripsi ..."></textarea>
+                                            <label>Category</label>
+                                            <select name="category_id" class="form-control">
+                                                @foreach ($category as $c)
+                                                <option value="{{$c->id_category}}">{{$c->category_name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <!-- <label for="customFile">Custom File</label> -->
@@ -97,10 +102,6 @@
                                                 <input name="image_url" type="file" class="custom-file-input" id="customFile" accept="image/*">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
-                                        </div>
-                                        <div class="form-check">
-                                            <input name="is_galerysoloevent" type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Simpan sebagai Galery Solo Events</label>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
@@ -138,6 +139,8 @@
     <script src="{{ asset("/bower_components/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
     <!-- bs-custom-file-input -->
     <script src="{{ asset("/bower_components/admin-lte/plugins/bs-custom-file-input/bs-custom-file-input.min.js")}}"></script>
+    <!-- Summernotes -->
+    <script src="{{ asset("/bower_components/admin-lte/plugins/summernote/summernote-bs4.min.js")}}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset("/bower_components/admin-lte/dist/js/adminlte.min.js")}}"></script>
     <!-- AdminLTE for demo purposes -->
@@ -145,6 +148,12 @@
     <script>
         $(function() {
             bsCustomFileInput.init();
+        });
+    </script>
+    <script>
+        $(function() {
+            // Summernote
+            $('#summernote').summernote();
         });
     </script>
 </body>

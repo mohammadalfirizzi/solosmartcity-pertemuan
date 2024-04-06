@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminArticleController;
 use App\Http\Controllers\AdminSoloEventController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,3 +48,10 @@ Route::post('/admin/soloevent/add', [AdminSoloEventController::class, 'create'])
 Route::get('/admin/soloevent/edit/{id}', [AdminSoloEventController::class, 'edit'])->name('editSoloEvent');
 Route::post('/admin/soloevent/update', [AdminSoloEventController::class, 'update'])->name('updateSoloEvent');
 Route::get('/admin/soloevent/delete/{id}', [AdminSoloEventController::class, 'delete'])->name('deleteSoloEvent');
+
+Route::get('/admin/article', [AdminArticleController::class, 'index'])->name('indexArticle');
+Route::get('/admin/article/add', [AdminArticleController::class, 'add'])->name('addViewArticle');
+Route::post('/admin/article/add', [AdminArticleController::class, 'create'])->name('addArticle');
+Route::get('/admin/article/edit/{id}', [AdminArticleController::class, 'edit'])->name('editArticle');
+Route::post('/admin/article/update', [AdminArticleController::class, 'update'])->name('updateArticle');
+Route::get('/admin/article/delete/{id}', [AdminArticleController::class, 'delete'])->name('deleteArticle');

@@ -27,20 +27,21 @@ class AdminSoloEventController extends Controller
         $description = $request->description;
         $image_url = $request->file("image_url");
         $is_galerysoloevent = $request->is_galerysoloevent ? 1 : 0;
-
+        $filename = $image_url->getClientOriginalName();
+        $filename = pathinfo($filename, PATHINFO_FILENAME);
         $add = DB::table('soloevent')->insert([
             'title' => $title,
             'start_periode' => $start_periode,
             'end_periode' => $end_periode,
             'location' => $location,
             'description' => $description,
-            'image_url' =>  $image_url->getClientOriginalName(),
+            'image_url' =>  $filename . '-' . date('Y-m-dH-i-s') . '.' . $image_url->getClientOriginalExtension(),
             'is_galerysoloevent' => $is_galerysoloevent
         ]);
 
         if ($add) {
             $tujuan_upload = 'data_file';
-            $image_url->move($tujuan_upload, $image_url->getClientOriginalName());
+            $image_url->move($tujuan_upload, $filename . '-' . date('Y-m-dH-i-s') . '.' . $image_url->getClientOriginalExtension());
             return redirect()->route('indexSoloEvent')
                 ->with('success', 'Data berhasil ditambahkan!');
         } else {
@@ -99,6 +100,8 @@ class AdminSoloEventController extends Controller
     }
     public function delete($id)
     {
+        $getimageurl = DB::table('soloevent')->where('id', $id)->first();
+        unlink('data_file/' . $getimageurl->image_url);
         $data = DB::table('soloevent')->where('id', $id)->delete();
         return redirect()->route('indexSoloEvent')
             ->with('success', 'Data berhasil dihapus!');
