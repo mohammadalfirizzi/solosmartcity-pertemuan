@@ -18,3 +18,17 @@
 <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css")}}">
 <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css")}}">
 <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css")}}">
+<style>
+    .nav-tabs .nav-link {
+        background: #fcc010;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        background: #051242;
+        color: #ffffff;
+        font-weight: bold;
+    }
+</style>

@@ -66,195 +66,28 @@
 <div class="header-text4">
     <h2>Produk Hukum</h2>
 </div>
+
 <div class="row align-items-center choose-c">
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div class="cardprodukhukum d-flex align-items-center">
-    </div>
-    <div id="produkhukum-table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-        <div class="top">
-            <div id="produkhukum-table_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="Search" aria-controls="produkhukum-table"></label>
-            </div>
-        </div>
-        <div class="data-table">
-            <table id="produkhukum-table" class="table table-striped table-hover dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="produkhukum-table_info">
-                <tbody>
-                    <tr role="row2" class="odd">
-                        <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                        <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                KEPUTUSAN WALI KOTA</a>
-                        </td>
-
-                    </tr>
-                    <tr role="row2" class="even">
-                        <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                        <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                PERATURAN WALI KOTA</a>
-                        </td>
-
-                    </tr>
-                    <tr role="row2" class="odd">
-                        <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                        <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                KEPUTUSAN
-                                WALI KOTA</a>
-                        </td>
-
-                    </tr>
-                    <tr role="row2" class="even">
-                        <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                        <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                PERATURAN WALI KOTA </a>
-                        </td>
-
-                    </tr>
-                    <tr role="row2" class="odd">
-                        <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                        <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                KEPUTUSAN
-                                WALI KOTA</a>
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table>
-            <div class="bottom">
-                <div class="dataTables_length" id="produkhukum-table_length"><label>Show <select name="produkhukum-table_length" aria-controls="produkhukum-table" class="custom-select custom-select-sm form-control form-control-sm">
-                            <option value="5">5</option>
-                            <option value="25">25
-
-                            </option>
-                            <option value="50">50</option>
-                            <option value="-1">All</option>
-                        </select></label></div>
-                <div class="dataTables_info" id="produkhukum-table_info" role="status" aria-live="polite"> 1-5 of 12
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
     <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-                <a href="" class="btn btn-primary float-right">Create</a>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <table id="cobadatatable" class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN WALI KOTA</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
-                            <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="#">
-                                    KEPUTUSAN BUPATI</a>
-                            </td>
-                        </tr>
+        <table id="cobadatatable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($data as $d)
+                <tr>
+                    <td style="vertical-align: middle; " data-label="Jenis Dokumen" class="sorting_1"><img class="imgprodukhukum" src="https://smartcity.tangerangkota.go.id/assets/gambar/pdf.png"></td>
+                    <td style="vertical-align: middle; " data-label="Produk Hukum"><a href="{{asset("data_file/$d->file_url")}}">
+                            {{$d->title}}</a>
+                    </td>
+                </tr>
+                @endforeach
 
-                    </tbody>
-                </table>
-            </div>
-            <!-- /.card-body -->
-        </div>
+            </tbody>
+        </table>
     </div>
 </div>
 @endsection
