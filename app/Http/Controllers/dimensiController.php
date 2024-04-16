@@ -15,9 +15,31 @@ class dimensiController extends Controller
         $data = DB::table('dimensiarticle')
             ->join('dimensiauthor', 'dimensiarticle.author_id', '=', 'dimensiauthor.id_author')
             ->join('dimensicategory', 'dimensiarticle.category_id', '=', 'dimensicategory.id_category')
+            ->orderBy('dimensiarticle.created_at', 'desc')
             ->paginate(10);
         return view('content/dimensi', ['data' => $data]);
     }
+
+    public function search(Request $request)
+    {
+        if ($request->search) {
+            $output = "";
+            $data = DB::table('dimensiarticle')
+                ->join('dimensiauthor', 'dimensiarticle.author_id', '=', 'dimensiauthor.id_author')
+                ->join('dimensicategory', 'dimensiarticle.category_id', '=', 'dimensicategory.id_category')
+                ->select('dimensiarticle.*', 'dimensiauthor.author_name', 'dimensicategory.category_name', 'dimensicategory.category_alias')
+                ->where('dimensiarticle.content', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('dimensiarticle.title', 'LIKE', '%' . $request->search . '%')
+                ->get();
+            if ($data) {
+                foreach ($data as $key => $d) {
+                    $output .= '<a href="/dimensidetail/' . $d->id . '"><li class="list-group-item d-flex justify-content-between align-items-start remove-border">' . $d->content . '</li></a>';
+                }
+                return response($output);
+            }
+        }
+    }
+
     public function dashboard()
     {
         $data = Dimensi::get();

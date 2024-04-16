@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminArticleController;
 use App\Http\Controllers\AdminSoloEventController;
+use App\Http\Controllers\dimensiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,3 +56,6 @@ Route::post('/admin/article/add', [AdminArticleController::class, 'create'])->na
 Route::get('/admin/article/edit/{id}', [AdminArticleController::class, 'edit'])->name('editArticle');
 Route::post('/admin/article/update', [AdminArticleController::class, 'update'])->name('updateArticle');
 Route::get('/admin/article/delete/{id}', [AdminArticleController::class, 'delete'])->name('deleteArticle');
+
+//Search Dimensi
+Route::get('/search/dimensi', [dimensiController::class, 'search'])->name('searchDimensi');
